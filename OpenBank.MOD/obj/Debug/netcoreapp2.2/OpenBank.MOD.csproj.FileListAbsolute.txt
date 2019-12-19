@@ -1,8 +1,0 @@
-D:\Sollus\OpenBank\OpenBank\OpenBank.MOD\bin\Debug\netcoreapp2.2\OpenBank.MOD.deps.json
-D:\Sollus\OpenBank\OpenBank\OpenBank.MOD\bin\Debug\netcoreapp2.2\OpenBank.MOD.dll
-D:\Sollus\OpenBank\OpenBank\OpenBank.MOD\bin\Debug\netcoreapp2.2\OpenBank.MOD.pdb
-D:\Sollus\OpenBank\OpenBank\OpenBank.MOD\obj\Debug\netcoreapp2.2\OpenBank.MOD.AssemblyInfoInputs.cache
-D:\Sollus\OpenBank\OpenBank\OpenBank.MOD\obj\Debug\netcoreapp2.2\OpenBank.MOD.AssemblyInfo.cs
-D:\Sollus\OpenBank\OpenBank\OpenBank.MOD\obj\Debug\netcoreapp2.2\OpenBank.MOD.dll
-D:\Sollus\OpenBank\OpenBank\OpenBank.MOD\obj\Debug\netcoreapp2.2\OpenBank.MOD.pdb
-D:\Sollus\OpenBank\OpenBank\OpenBank.MOD\obj\Debug\netcoreapp2.2\OpenBank.MOD.csprojAssemblyReference.cache

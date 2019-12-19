@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,12 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using OpenBank.API.Helpers;
-using OpenBank.DAL.Context;
+using OpenBank.Repository.Context;
+using OpenBank.Repository.External;
+using OpenBank.Repository.Repositories.Classes;
+using OpenBank.Repository.Repositories.Interfaces;
+using OpenBank.Service.Services.Classes;
+using OpenBank.Service.Services.Interfaces;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace OpenBank.API
@@ -29,6 +35,7 @@ namespace OpenBank.API
     {
         public Startup(IConfiguration configuration)
         {
+            
             Configuration = configuration;
         }
 
@@ -68,11 +75,8 @@ namespace OpenBank.API
 
 
             services.AddScoped<AuthenticatedUser>();
-            //services.AddTransient<IParametroRepository, ParametroRepository>();
-            //services.AddTransient<ITipoCategoriaRepository, TipoCategoriaRepository>();
-            //services.AddTransient<ICategoriaRepository, CategoriaRepository>();
-            //services.AddTransient<IParceiroRepository, ParceiroRepository>();
-            //services.AddTransient<IMidiaParceiroRepository, MidiaParceiroRepository>();
+            services.AddTransient<IClienteService, ClienteService>();
+            services.AddTransient<IClienteRepository, ClienteRepository>();
 
 
             services.AddSwaggerGen(c =>

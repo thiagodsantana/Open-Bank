@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29519.87
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBank.API", "OpenBank.API\OpenBank.API.csproj", "{1B56BF58-2F17-4197-81B2-A580BAC174D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenBank.API", "OpenBank.API\OpenBank.API.csproj", "{1B56BF58-2F17-4197-81B2-A580BAC174D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBank.DAL", "OpenBank.DAL\OpenBank.DAL.csproj", "{C5CB4A18-4219-4307-82B1-BCA1D21FF8D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenBank.Domain", "OpenBank.Domain\OpenBank.Domain.csproj", "{0F909A05-0311-4EF2-9C55-292EC490164B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBank.MOD", "OpenBank.MOD\OpenBank.MOD.csproj", "{298114D2-1C92-42EC-9A77-1ED717217961}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenBank.Repository", "OpenBank.Repository\OpenBank.Repository.csproj", "{C9B3D2E5-C4D5-462B-80DA-D47E0BAF09D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBank.Service", "OpenBank.Service\OpenBank.Service.csproj", "{6AE46655-F6BC-4F3A-826F-DDF41F831296}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +21,18 @@ Global
 		{1B56BF58-2F17-4197-81B2-A580BAC174D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B56BF58-2F17-4197-81B2-A580BAC174D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B56BF58-2F17-4197-81B2-A580BAC174D5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C5CB4A18-4219-4307-82B1-BCA1D21FF8D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5CB4A18-4219-4307-82B1-BCA1D21FF8D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5CB4A18-4219-4307-82B1-BCA1D21FF8D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5CB4A18-4219-4307-82B1-BCA1D21FF8D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{298114D2-1C92-42EC-9A77-1ED717217961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{298114D2-1C92-42EC-9A77-1ED717217961}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{298114D2-1C92-42EC-9A77-1ED717217961}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{298114D2-1C92-42EC-9A77-1ED717217961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F909A05-0311-4EF2-9C55-292EC490164B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F909A05-0311-4EF2-9C55-292EC490164B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F909A05-0311-4EF2-9C55-292EC490164B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F909A05-0311-4EF2-9C55-292EC490164B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9B3D2E5-C4D5-462B-80DA-D47E0BAF09D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9B3D2E5-C4D5-462B-80DA-D47E0BAF09D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9B3D2E5-C4D5-462B-80DA-D47E0BAF09D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9B3D2E5-C4D5-462B-80DA-D47E0BAF09D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AE46655-F6BC-4F3A-826F-DDF41F831296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AE46655-F6BC-4F3A-826F-DDF41F831296}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AE46655-F6BC-4F3A-826F-DDF41F831296}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AE46655-F6BC-4F3A-826F-DDF41F831296}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

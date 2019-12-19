@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\DefaultController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
@@ -16,8 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OpenBank.DAL\OpenBank.DAL.csproj" />
-    <ProjectReference Include="..\OpenBank.MOD\OpenBank.MOD.csproj" />
+    <ProjectReference Include="..\OpenBank.Domain\OpenBank.Domain.csproj" />
+    <ProjectReference Include="..\OpenBank.Service\OpenBank.Service.csproj" />
   </ItemGroup>
 
 </Project>

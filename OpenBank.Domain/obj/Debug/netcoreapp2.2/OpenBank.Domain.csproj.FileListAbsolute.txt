@@ -1,0 +1,9 @@
+E:\Projetos\Open-Bank\OpenBank.Domain\bin\Debug\netcoreapp2.2\OpenBank.Domain.deps.json
+E:\Projetos\Open-Bank\OpenBank.Domain\bin\Debug\netcoreapp2.2\OpenBank.Domain.dll
+E:\Projetos\Open-Bank\OpenBank.Domain\bin\Debug\netcoreapp2.2\OpenBank.Domain.pdb
+E:\Projetos\Open-Bank\OpenBank.Domain\obj\Debug\netcoreapp2.2\OpenBank.Domain.csprojAssemblyReference.cache
+E:\Projetos\Open-Bank\OpenBank.Domain\obj\Debug\netcoreapp2.2\OpenBank.Domain.csproj.CoreCompileInputs.cache
+E:\Projetos\Open-Bank\OpenBank.Domain\obj\Debug\netcoreapp2.2\OpenBank.Domain.AssemblyInfoInputs.cache
+E:\Projetos\Open-Bank\OpenBank.Domain\obj\Debug\netcoreapp2.2\OpenBank.Domain.AssemblyInfo.cs
+E:\Projetos\Open-Bank\OpenBank.Domain\obj\Debug\netcoreapp2.2\OpenBank.Domain.dll
+E:\Projetos\Open-Bank\OpenBank.Domain\obj\Debug\netcoreapp2.2\OpenBank.Domain.pdb

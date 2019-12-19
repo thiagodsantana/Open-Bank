@@ -1,40 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using OpenBank.DAL;
-using OpenBank.DAL.Repositories.Interfaces;
-using OpenBank.MOD.Models;
-using OpenBank.MOD.ViewModels;
+using OpenBank.Domain.Models;
+using OpenBank.Domain.ViewModels;
+using OpenBank.Repository;
+using OpenBank.Service.Services.Interfaces;
 
 namespace OpenBank.API.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class TokenController : Controller
     {
         private readonly IConfiguration _configuration;
-        private readonly IClienteRepository _clienteRepository;
+        private readonly IClienteService _clienteService;
 
-        public TokenController(IConfiguration configuration, IClienteRepository clienteRepository)
+        public TokenController(IConfiguration configuration, IClienteService clienteService)
         {
             _configuration = configuration;
-            _clienteRepository = clienteRepository;
+            _clienteService = clienteService;
         }
-
-        [AllowAnonymous]
-        [HttpPost("RequestToken")]
+        
+        [Route("RequestToken")]
         [HttpPost]
         public IActionResult RequestToken([FromBody] LoginVM request)
         {
 
-            var cliente = _clienteRepository.FindBy(p => p.Cpf.Equals(request.Cpf)).FirstOrDefault();
+            var cliente = _clienteService.ObterPorCpf(request.Cpf);
             if (cliente == null)
             {
                 return BadRequest(new ErroVM
@@ -58,13 +57,13 @@ namespace OpenBank.API.Controllers
                 Mensagem = "Credenciais inválidas!"
             });
 
-        }       
+        }        
 
-        protected string GerarToken(LoginVM request)
+        private string GerarToken(LoginVM request)
         {
 
-            var claims = new Claim[2];          
-            var cliente = _clienteRepository.FindBy(p => p.Cpf.Equals(request.Cpf)).FirstOrDefault();
+            var claims = new Claim[2];
+            var cliente = _clienteService.ObterPorCpf(request.Cpf);
             if (cliente != null)
             {
                 claims = new[]
