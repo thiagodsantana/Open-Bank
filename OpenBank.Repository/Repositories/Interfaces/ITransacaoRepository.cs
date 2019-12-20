@@ -5,8 +5,8 @@ using System.Text;
 
 namespace OpenBank.Repository.Repositories.Interfaces
 {
-    public interface IClienteRepository : IRepository<Cliente>
+    public interface ITransacaoRepository : IRepository<Transacao>
     {
-        Cliente ObterPorCpf(string cpf);
+
     }
 }

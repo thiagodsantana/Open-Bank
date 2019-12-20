@@ -38,7 +38,7 @@ namespace OpenBank.API.Controllers
             {
                 return BadRequest(new ErroVM
                 {
-                    Excecao = "Usuário não encontrado com o email informado!",
+                    Excecao = "Cliente não localizado!",
                     Mensagem = "Credenciais inválidas!"
                 });
             }

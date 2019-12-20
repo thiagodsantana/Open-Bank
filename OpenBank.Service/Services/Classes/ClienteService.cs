@@ -19,7 +19,7 @@ namespace OpenBank.Service.Services.Classes
 
         public Cliente ObterPorCpf(string cpf)
         {
-            return _clienteRepository.FindBy(p => p.Cpf.Equals(cpf)).FirstOrDefault();            
+            return _clienteRepository.ObterPorCpf(cpf);            
         }
     }
 }
