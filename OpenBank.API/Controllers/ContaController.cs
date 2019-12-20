@@ -103,8 +103,16 @@ namespace OpenBank.API.Controllers
         {
             try
             {
-                var ClienteId = _contaService.ObterConta(contaVM.Agencia, contaVM.Conta).ClienteId;
-                if (ClienteId != Convert.ToInt32(_authenticatedUser.Id))
+                var conta = _contaService.ObterConta(contaVM.Agencia, contaVM.NumConta);
+                if (conta == null)
+                {
+                    return BadRequest(new ErroVM
+                    {
+                        Excecao = "",
+                        Mensagem = "Conta não localizada!"
+                    });
+                }
+                if (conta.ClienteId != Convert.ToInt32(_authenticatedUser.Id))
                 {
                     return BadRequest(new ErroVM
                     {
@@ -112,8 +120,13 @@ namespace OpenBank.API.Controllers
                         Mensagem = "Dados bancários inválido!"
                     });
                 }
-                var saldo = _contaService.ObterSaldo(contaVM.Agencia, contaVM.Conta);
-                return Ok(saldo.ToString("N2"));
+                var saldo = _contaService.ObterSaldo(contaVM.Agencia, contaVM.NumConta);
+                return Ok(new SaldoVM
+                {
+                    Conta = Mapper.Map<Conta, DadosContaVM>(conta),
+                    Saldo = saldo
+                }
+                );
             }
             catch (Exception ex)
             {
@@ -131,8 +144,8 @@ namespace OpenBank.API.Controllers
         public IActionResult ObterExtrato([FromBody] ExtratoVM extrato)
         {
             try
-            {                
-                var conta = _contaService.ObterConta(extrato.Agencia, extrato.Conta);
+            {
+                var conta = _contaService.ObterConta(extrato.Agencia, extrato.NumConta);
                 if (conta.ClienteId != Convert.ToInt32(_authenticatedUser.Id))
                 {
                     return BadRequest(new ErroVM

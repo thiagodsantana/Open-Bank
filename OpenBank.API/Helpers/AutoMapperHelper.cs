@@ -16,6 +16,9 @@ namespace OpenBank.API.Helpers
                 {
                     cfg.CreateMap<Transacao, TransacaoVM>()
                         .ForMember(dest => dest.TipoMovimento, opt => opt.MapFrom(src => src.TipoMovimento == 1 ? "Crédito" : "Débito"));
+
+                    cfg.CreateMap<Conta, ContaVM>();
+                    cfg.CreateMap<Conta, DadosContaVM>();
                 });
         }
 

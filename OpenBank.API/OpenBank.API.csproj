@@ -24,8 +24,4 @@
     <ProjectReference Include="..\OpenBank.Service\OpenBank.Service.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Base\" />
-  </ItemGroup>
-
 </Project>

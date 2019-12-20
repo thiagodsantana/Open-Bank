@@ -11,5 +11,6 @@ namespace OpenBank.Domain.Models
         public int TipoMovimento { get; set; }
         public decimal valor { get; set; }
         public DateTime DataHora { get; set; }
+        public virtual Conta Conta { get; set; }
     }
 }
