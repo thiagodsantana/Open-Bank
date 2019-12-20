@@ -13,5 +13,6 @@ namespace OpenBank.Domain.Models
         public decimal Saldo { get; set; }
         public DateTime DataCadastro { get; set; }
         public virtual Cliente Cliente { get; set; }
+        public virtual List<Transacao> Transacoes { get; set; }
     }
 }

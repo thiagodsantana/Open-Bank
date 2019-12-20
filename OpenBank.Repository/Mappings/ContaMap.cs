@@ -22,6 +22,8 @@ namespace OpenBank.Repository.Mappings
             builder.Property(x => x.NumConta).HasColumnName("CONTA").IsRequired();
             builder.Property(x => x.Saldo).HasColumnName("SALDO").IsRequired();
             builder.Property(x => x.DataCadastro).HasColumnName("DATA_CADASTRO").IsRequired();
+
+            builder.HasOne(x => x.Cliente).WithMany(x => x.Contas);
         }
     }
 }

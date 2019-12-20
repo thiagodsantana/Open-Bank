@@ -19,6 +19,7 @@ namespace OpenBank.Repository.Mappings
             builder.Property(x => x.SobreNome).HasColumnName("SOBRENOME").IsRequired();
             builder.Property(x => x.Senha).HasColumnName("SENHA").IsRequired();
             builder.Property(x => x.DataCadastro).HasColumnName("DATA_CADASTRO").IsRequired();           
+            
         }
     }
 }

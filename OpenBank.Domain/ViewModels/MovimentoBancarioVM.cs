@@ -7,7 +7,7 @@ namespace OpenBank.Domain.ViewModels
     public class MovimentoBancarioVM
     {
         public string Agencia { get; set; }
-        public string Conta { get; set; }
+        public string NumConta { get; set; }
         public decimal Valor { get; set; }
     }
 }

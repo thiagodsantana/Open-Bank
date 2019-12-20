@@ -19,7 +19,9 @@ namespace OpenBank.Repository.Mappings
             builder.Property(x => x.ContaId).HasColumnName("ID_CONTA").IsRequired();
             builder.Property(x => x.TipoMovimento).HasColumnName("TIPO_MOVIMENTO").IsRequired();
             builder.Property(x => x.valor).HasColumnName("VALOR").IsRequired();
-            builder.Property(x => x.DataHora).HasColumnName("DATA_HORA").IsRequired();            
+            builder.Property(x => x.DataHora).HasColumnName("DATA_HORA").IsRequired();
+
+            builder.HasOne(x => x.Conta).WithMany(x => x.Transacoes);
         }
     }
 }

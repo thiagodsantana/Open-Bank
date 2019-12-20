@@ -33,7 +33,7 @@ namespace OpenBank.API.Controllers
         {
             try
             {
-                var conta = _contaService.ObterConta(movimento.Agencia, movimento.Conta);
+                var conta = _contaService.ObterConta(movimento.Agencia, movimento.NumConta);
                 if (conta == null)
                 {
                     return BadRequest(new ErroVM
@@ -72,7 +72,7 @@ namespace OpenBank.API.Controllers
         {
             try
             {
-                var conta = _contaService.ObterConta(movimento.Agencia, movimento.Conta);
+                var conta = _contaService.ObterConta(movimento.Agencia, movimento.NumConta);
                 if (conta == null)
                 {
                     return BadRequest(new ErroVM
