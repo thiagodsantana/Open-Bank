@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using System.Transactions;
 
 namespace OpenBank.Service.Services.Classes
 {
@@ -22,8 +23,8 @@ namespace OpenBank.Service.Services.Classes
             _contaRepository = contaRepository;
             _transacaoRepository = transacaoRepository;
         }
-
-        public Conta ObterContaId(string agencia, string numConta)
+        
+        public Conta ObterConta(string agencia, string numConta)
         {
             return _contaRepository.FindBy(p => p.Agencia.Equals(agencia) && p.NumConta.Equals(numConta)).FirstOrDefault();
         }
@@ -33,20 +34,25 @@ namespace OpenBank.Service.Services.Classes
             try
             {
                 var conta = _contaRepository.FindBy(p => p.Id == idConta).FirstOrDefault();
-                if (conta != null)
+                if (conta == null)
                 {
                     throw new Exception("Conta não localizada!");
                 }
-                conta.Saldo += valor;
-                _contaRepository.Update(conta);
-
-                _transacaoRepository.Add(new Transacao
+                using (TransactionScope ts = new TransactionScope())
                 {
-                    ContaId = conta.Id,
-                    DataHora = DateTime.Now,
-                    TipoMovimento = (int)EnumTrasacao.Deposito,
-                    valor = valor
-                });
+                    conta.Saldo += valor;
+                    _contaRepository.Update(conta);
+
+                    _transacaoRepository.Add(new Transacao
+                    {
+                        ContaId = conta.Id,
+                        DataHora = DateTime.Now,
+                        TipoMovimento = (int)EnumTrasacao.Deposito,
+                        valor = valor
+                    });
+                    ts.Complete();
+                }
+
                 return true;
             }
             catch (Exception ex)
@@ -55,9 +61,14 @@ namespace OpenBank.Service.Services.Classes
             }
         }
 
-        public void ObterExtrato(int idConta)
-        {
-         
+        public decimal ObterSaldo(string agencia, string numConta)
+        {            
+            var conta = _contaRepository.FindBy(p => p.Agencia.Equals(agencia) && p.NumConta.Equals(numConta)).FirstOrDefault();
+            if (conta == null)
+            {
+                throw new Exception("Conta não localizada!");
+            }
+            return conta.Saldo;
         }
 
         public bool Sacar(int idConta, decimal valor)
@@ -65,7 +76,7 @@ namespace OpenBank.Service.Services.Classes
             try
             {
                 var conta = _contaRepository.FindBy(p => p.Id == idConta).FirstOrDefault();
-                if (conta != null)
+                if (conta == null)
                 {
                     throw new Exception("Conta não localizada!");
                 }
@@ -73,16 +84,22 @@ namespace OpenBank.Service.Services.Classes
                 {
                     throw new Exception("Saldo insuficiente!");
                 }
-                conta.Saldo += valor;
-                _contaRepository.Update(conta);
 
-                _transacaoRepository.Add(new Transacao
+                using (TransactionScope ts = new TransactionScope())
                 {
-                    ContaId = conta.Id,
-                    DataHora = DateTime.Now,
-                    TipoMovimento = (int)EnumTrasacao.Saque,
-                    valor = valor
-                });
+                    conta.Saldo -= valor;
+                    _contaRepository.Update(conta);
+
+                    _transacaoRepository.Add(new Transacao
+                    {
+                        ContaId = conta.Id,
+                        DataHora = DateTime.Now,
+                        TipoMovimento = (int)EnumTrasacao.Saque,
+                        valor = valor
+                    });
+                    ts.Complete();
+                }
+
                 return true;
             }
             catch (Exception ex)

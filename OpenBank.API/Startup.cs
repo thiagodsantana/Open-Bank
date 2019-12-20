@@ -75,9 +75,15 @@ namespace OpenBank.API
 
 
             services.AddScoped<AuthenticatedUser>();
+
             services.AddTransient<IClienteService, ClienteService>();
             services.AddTransient<IClienteRepository, ClienteRepository>();
 
+            services.AddTransient<IContaService, ContaService>();
+            services.AddTransient<IContaRepository, ContaRepository>();
+
+            services.AddTransient<ITransacaoService, TransacaoService>();
+            services.AddTransient<ITransacaoRepository, TransacaoRepository>();
 
             services.AddSwaggerGen(c =>
             {

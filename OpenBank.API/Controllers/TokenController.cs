@@ -72,8 +72,7 @@ namespace OpenBank.API.Controllers
                      new Claim(ClaimTypes.NameIdentifier, cliente.Nome)
                 };
             }
-            //recebe uma instancia da classe SymmetricSecurityKey 
-            //armazenando a chave de criptografia usada na criação do token
+         
             var key = new SymmetricSecurityKey(
                         Encoding.UTF8.GetBytes(_configuration["SecurityKey"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -82,7 +81,7 @@ namespace OpenBank.API.Controllers
                  issuer: "openbank.com",
                  audience: "openbank.com",
                  claims: claims,
-                 expires: DateTime.Now.AddDays(1),
+                 expires: DateTime.Now.AddDays(365),
                  signingCredentials: creds);
 
             return new JwtSecurityTokenHandler().WriteToken(token);

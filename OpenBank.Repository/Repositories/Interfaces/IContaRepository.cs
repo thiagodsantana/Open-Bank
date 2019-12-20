@@ -9,6 +9,5 @@ namespace OpenBank.Repository.Repositories.Interfaces
     {
         bool Sacar(int idConta, decimal valor);
         bool Depositar(int idConta, decimal valor);
-        void ObterExtrato(int idConta);
     }
 }

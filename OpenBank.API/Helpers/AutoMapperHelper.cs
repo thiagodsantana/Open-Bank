@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using OpenBank.Domain.Models;
+using OpenBank.Domain.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,14 +14,8 @@ namespace OpenBank.API.Helpers
         {
             Mapper.Initialize(cfg =>
                 {
-                    //cfg.CreateMap<Parametro, ParametroVM>();
-                    //cfg.CreateMap<TipoCategoria, TipoCategoriaVM>();
-                    //cfg.CreateMap<Categoria, CategoriaVM>();
-                    //cfg.CreateMap<Parceiro, ParceiroVM>();
-                    //cfg.CreateMap<MidiaParceiro, MidiaParceiroVM>();
-                    //cfg.CreateMap<Cidade, CidadeVM>()
-                    //  .ForMember(dest => dest.Nome, opt => opt.MapFrom(src => src.Descricao))
-                    //  .ForMember(dest => dest.Estado, opt => opt.MapFrom(src => src.Estado.Sigla));
+                    cfg.CreateMap<Transacao, TransacaoVM>()
+                        .ForMember(dest => dest.TipoMovimento, opt => opt.MapFrom(src => src.TipoMovimento == 1 ? "Crédito" : "Débito"));
                 });
         }
 

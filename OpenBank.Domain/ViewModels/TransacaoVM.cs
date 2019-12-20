@@ -6,7 +6,7 @@ namespace OpenBank.Domain.ViewModels
 {
     public class TransacaoVM
     {
-        public int TipoMovimento { get; set; }
+        public string TipoMovimento { get; set; }
         public decimal valor { get; set; }
         public DateTime DataHora { get; set; }
     }

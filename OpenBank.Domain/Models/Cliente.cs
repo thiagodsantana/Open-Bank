@@ -12,5 +12,7 @@ namespace OpenBank.Domain.Models
         public string SobreNome { get; set; }
         public string Senha { get; set; }
         public DateTime DataCadastro { get; set; }
+        public virtual Cliente Client { get; set; }
+        public virtual List<Conta> Contas { get; set; }
     }
 }

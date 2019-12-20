@@ -31,9 +31,11 @@ namespace OpenBank.Repository.Repositories.Classes
             }            
         }
 
-        public void ObterExtrato(int idConta)
+        public decimal ObterSaldo(int idConta)
         {
-            throw new System.NotImplementedException();
+            var conta = FindBy(p => p.Id == idConta).FirstOrDefault();
+            return conta.Saldo;
+
         }
 
         public bool Sacar(int idConta, decimal valor)

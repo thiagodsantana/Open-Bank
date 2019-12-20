@@ -7,3 +7,11 @@ E:\Projetos\Open-Bank\OpenBank.Domain\obj\Debug\netcoreapp2.2\OpenBank.Domain.As
 E:\Projetos\Open-Bank\OpenBank.Domain\obj\Debug\netcoreapp2.2\OpenBank.Domain.AssemblyInfo.cs
 E:\Projetos\Open-Bank\OpenBank.Domain\obj\Debug\netcoreapp2.2\OpenBank.Domain.dll
 E:\Projetos\Open-Bank\OpenBank.Domain\obj\Debug\netcoreapp2.2\OpenBank.Domain.pdb
+D:\Sollus\Open-Bank\OpenBank.Domain\bin\Debug\netcoreapp2.2\OpenBank.Domain.deps.json
+D:\Sollus\Open-Bank\OpenBank.Domain\bin\Debug\netcoreapp2.2\OpenBank.Domain.dll
+D:\Sollus\Open-Bank\OpenBank.Domain\bin\Debug\netcoreapp2.2\OpenBank.Domain.pdb
+D:\Sollus\Open-Bank\OpenBank.Domain\obj\Debug\netcoreapp2.2\OpenBank.Domain.csprojAssemblyReference.cache
+D:\Sollus\Open-Bank\OpenBank.Domain\obj\Debug\netcoreapp2.2\OpenBank.Domain.AssemblyInfoInputs.cache
+D:\Sollus\Open-Bank\OpenBank.Domain\obj\Debug\netcoreapp2.2\OpenBank.Domain.AssemblyInfo.cs
+D:\Sollus\Open-Bank\OpenBank.Domain\obj\Debug\netcoreapp2.2\OpenBank.Domain.dll
+D:\Sollus\Open-Bank\OpenBank.Domain\obj\Debug\netcoreapp2.2\OpenBank.Domain.pdb

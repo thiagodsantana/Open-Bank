@@ -11,7 +11,6 @@ namespace OpenBank.Domain.Models
         public string Agencia { get; set; }
         public string NumConta { get; set; }
         public decimal Saldo { get; set; }
-        public int Tipo { get; set; }
         public DateTime DataCadastro { get; set; }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Sollus\\OpenBank\\OpenBank\\OpenBank.API\\OpenBank.API.csproj": {}
+    "D:\\Sollus\\Open-Bank\\OpenBank.API\\OpenBank.API.csproj": {}
   },
   "projects": {
-    "D:\\Sollus\\OpenBank\\OpenBank\\OpenBank.API\\OpenBank.API.csproj": {
+    "D:\\Sollus\\Open-Bank\\OpenBank.API\\OpenBank.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Sollus\\OpenBank\\OpenBank\\OpenBank.API\\OpenBank.API.csproj",
+        "projectUniqueName": "D:\\Sollus\\Open-Bank\\OpenBank.API\\OpenBank.API.csproj",
         "projectName": "OpenBank.API",
-        "projectPath": "D:\\Sollus\\OpenBank\\OpenBank\\OpenBank.API\\OpenBank.API.csproj",
+        "projectPath": "D:\\Sollus\\Open-Bank\\OpenBank.API\\OpenBank.API.csproj",
         "packagesPath": "C:\\Users\\thiago_darlei\\.nuget\\packages\\",
-        "outputPath": "D:\\Sollus\\OpenBank\\OpenBank\\OpenBank.API\\obj\\",
+        "outputPath": "D:\\Sollus\\Open-Bank\\OpenBank.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\thiago_darlei\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,11 +27,11 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\Sollus\\OpenBank\\OpenBank\\OpenBank.DAL\\OpenBank.DAL.csproj": {
-                "projectPath": "D:\\Sollus\\OpenBank\\OpenBank\\OpenBank.DAL\\OpenBank.DAL.csproj"
+              "D:\\Sollus\\Open-Bank\\OpenBank.Domain\\OpenBank.Domain.csproj": {
+                "projectPath": "D:\\Sollus\\Open-Bank\\OpenBank.Domain\\OpenBank.Domain.csproj"
               },
-              "D:\\Sollus\\OpenBank\\OpenBank\\OpenBank.MOD\\OpenBank.MOD.csproj": {
-                "projectPath": "D:\\Sollus\\OpenBank\\OpenBank\\OpenBank.MOD\\OpenBank.MOD.csproj"
+              "D:\\Sollus\\Open-Bank\\OpenBank.Service\\OpenBank.Service.csproj": {
+                "projectPath": "D:\\Sollus\\Open-Bank\\OpenBank.Service\\OpenBank.Service.csproj"
               }
             }
           }
@@ -93,14 +93,69 @@
         }
       }
     },
-    "D:\\Sollus\\OpenBank\\OpenBank\\OpenBank.DAL\\OpenBank.DAL.csproj": {
+    "D:\\Sollus\\Open-Bank\\OpenBank.Domain\\OpenBank.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Sollus\\OpenBank\\OpenBank\\OpenBank.DAL\\OpenBank.DAL.csproj",
-        "projectName": "OpenBank.DAL",
-        "projectPath": "D:\\Sollus\\OpenBank\\OpenBank\\OpenBank.DAL\\OpenBank.DAL.csproj",
+        "projectUniqueName": "D:\\Sollus\\Open-Bank\\OpenBank.Domain\\OpenBank.Domain.csproj",
+        "projectName": "OpenBank.Domain",
+        "projectPath": "D:\\Sollus\\Open-Bank\\OpenBank.Domain\\OpenBank.Domain.csproj",
         "packagesPath": "C:\\Users\\thiago_darlei\\.nuget\\packages\\",
-        "outputPath": "D:\\Sollus\\OpenBank\\OpenBank\\OpenBank.DAL\\obj\\",
+        "outputPath": "D:\\Sollus\\Open-Bank\\OpenBank.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\thiago_darlei\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Sollus\\Open-Bank\\OpenBank.Repository\\OpenBank.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Sollus\\Open-Bank\\OpenBank.Repository\\OpenBank.Repository.csproj",
+        "projectName": "OpenBank.Repository",
+        "projectPath": "D:\\Sollus\\Open-Bank\\OpenBank.Repository\\OpenBank.Repository.csproj",
+        "packagesPath": "C:\\Users\\thiago_darlei\\.nuget\\packages\\",
+        "outputPath": "D:\\Sollus\\Open-Bank\\OpenBank.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\thiago_darlei\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -116,8 +171,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\Sollus\\OpenBank\\OpenBank\\OpenBank.MOD\\OpenBank.MOD.csproj": {
-                "projectPath": "D:\\Sollus\\OpenBank\\OpenBank\\OpenBank.MOD\\OpenBank.MOD.csproj"
+              "D:\\Sollus\\Open-Bank\\OpenBank.Domain\\OpenBank.Domain.csproj": {
+                "projectPath": "D:\\Sollus\\Open-Bank\\OpenBank.Domain\\OpenBank.Domain.csproj"
               }
             }
           }
@@ -160,14 +215,14 @@
         }
       }
     },
-    "D:\\Sollus\\OpenBank\\OpenBank\\OpenBank.MOD\\OpenBank.MOD.csproj": {
+    "D:\\Sollus\\Open-Bank\\OpenBank.Service\\OpenBank.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Sollus\\OpenBank\\OpenBank\\OpenBank.MOD\\OpenBank.MOD.csproj",
-        "projectName": "OpenBank.MOD",
-        "projectPath": "D:\\Sollus\\OpenBank\\OpenBank\\OpenBank.MOD\\OpenBank.MOD.csproj",
+        "projectUniqueName": "D:\\Sollus\\Open-Bank\\OpenBank.Service\\OpenBank.Service.csproj",
+        "projectName": "OpenBank.Service",
+        "projectPath": "D:\\Sollus\\Open-Bank\\OpenBank.Service\\OpenBank.Service.csproj",
         "packagesPath": "C:\\Users\\thiago_darlei\\.nuget\\packages\\",
-        "outputPath": "D:\\Sollus\\OpenBank\\OpenBank\\OpenBank.MOD\\obj\\",
+        "outputPath": "D:\\Sollus\\Open-Bank\\OpenBank.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\thiago_darlei\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -182,7 +237,14 @@
         },
         "frameworks": {
           "netcoreapp2.2": {
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Sollus\\Open-Bank\\OpenBank.Domain\\OpenBank.Domain.csproj": {
+                "projectPath": "D:\\Sollus\\Open-Bank\\OpenBank.Domain\\OpenBank.Domain.csproj"
+              },
+              "D:\\Sollus\\Open-Bank\\OpenBank.Repository\\OpenBank.Repository.csproj": {
+                "projectPath": "D:\\Sollus\\Open-Bank\\OpenBank.Repository\\OpenBank.Repository.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

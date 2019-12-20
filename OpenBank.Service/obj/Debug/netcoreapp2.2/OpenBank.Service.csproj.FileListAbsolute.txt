@@ -12,3 +12,16 @@ E:\Projetos\Open-Bank\OpenBank.Service\bin\Debug\netcoreapp2.2\OpenBank.Reposito
 E:\Projetos\Open-Bank\OpenBank.Service\bin\Debug\netcoreapp2.2\OpenBank.Domain.pdb
 E:\Projetos\Open-Bank\OpenBank.Service\bin\Debug\netcoreapp2.2\OpenBank.Repository.pdb
 E:\Projetos\Open-Bank\OpenBank.Service\obj\Debug\netcoreapp2.2\OpenBank.Service.csproj.CopyComplete
+D:\Sollus\Open-Bank\OpenBank.Service\bin\Debug\netcoreapp2.2\OpenBank.Service.deps.json
+D:\Sollus\Open-Bank\OpenBank.Service\bin\Debug\netcoreapp2.2\OpenBank.Service.dll
+D:\Sollus\Open-Bank\OpenBank.Service\bin\Debug\netcoreapp2.2\OpenBank.Service.pdb
+D:\Sollus\Open-Bank\OpenBank.Service\bin\Debug\netcoreapp2.2\OpenBank.Domain.dll
+D:\Sollus\Open-Bank\OpenBank.Service\bin\Debug\netcoreapp2.2\OpenBank.Repository.dll
+D:\Sollus\Open-Bank\OpenBank.Service\bin\Debug\netcoreapp2.2\OpenBank.Domain.pdb
+D:\Sollus\Open-Bank\OpenBank.Service\bin\Debug\netcoreapp2.2\OpenBank.Repository.pdb
+D:\Sollus\Open-Bank\OpenBank.Service\obj\Debug\netcoreapp2.2\OpenBank.Service.csprojAssemblyReference.cache
+D:\Sollus\Open-Bank\OpenBank.Service\obj\Debug\netcoreapp2.2\OpenBank.Service.AssemblyInfoInputs.cache
+D:\Sollus\Open-Bank\OpenBank.Service\obj\Debug\netcoreapp2.2\OpenBank.Service.AssemblyInfo.cs
+D:\Sollus\Open-Bank\OpenBank.Service\obj\Debug\netcoreapp2.2\OpenBank.Service.csproj.CopyComplete
+D:\Sollus\Open-Bank\OpenBank.Service\obj\Debug\netcoreapp2.2\OpenBank.Service.dll
+D:\Sollus\Open-Bank\OpenBank.Service\obj\Debug\netcoreapp2.2\OpenBank.Service.pdb

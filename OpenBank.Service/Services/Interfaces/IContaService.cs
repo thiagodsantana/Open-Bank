@@ -6,8 +6,9 @@ using System.Text;
 namespace OpenBank.Service.Services.Interfaces
 {
     public interface IContaService
-    {
-        Conta ObterContaId(string agencia, string numConta);
+    {        
+        Conta ObterConta(string agencia, string numConta);
+        decimal ObterSaldo(string agencia, string NumConta);
         bool Depositar(int idConta, decimal valor);
         bool Sacar(int idConta, decimal valor);
 

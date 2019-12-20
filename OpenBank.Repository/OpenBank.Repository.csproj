@@ -25,4 +25,10 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Base\DB_OpenBank.mdf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

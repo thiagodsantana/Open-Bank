@@ -17,4 +17,10 @@ namespace OpenBank.Domain.Enumerators
         Poupanca = 1,
         Corrente = 2        
     }
+
+    public enum EnumTipoMovimento
+    {
+        Credito = 1,
+        Debito = 2
+    }
 }
