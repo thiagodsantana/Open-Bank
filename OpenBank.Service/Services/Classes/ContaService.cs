@@ -13,17 +13,19 @@ namespace OpenBank.Service.Services.Classes
 {
     public class ContaService : IContaService
     {
-        private readonly IClienteRepository _clienteRepository;
+        #region Interfaces
         private readonly IContaRepository _contaRepository;
         private readonly ITransacaoRepository _transacaoRepository;
+        #endregion
 
-        public ContaService(IClienteRepository clienteRepository, IContaRepository contaRepository, ITransacaoRepository transacaoRepository)
+        #region Construtor
+        public ContaService(IContaRepository contaRepository, ITransacaoRepository transacaoRepository)
         {
-            _clienteRepository = clienteRepository;
             _contaRepository = contaRepository;
             _transacaoRepository = transacaoRepository;
         }
-        
+        #endregion
+
         public Conta ObterConta(string agencia, string numConta)
         {
             return _contaRepository.FindBy(p => p.Agencia.Equals(agencia) && p.NumConta.Equals(numConta)).FirstOrDefault();

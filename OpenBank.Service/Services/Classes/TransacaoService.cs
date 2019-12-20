@@ -10,12 +10,16 @@ namespace OpenBank.Service.Services.Classes
 {
     public class TransacaoService : ITransacaoService
     {
+        #region Interfaces
         private readonly ITransacaoRepository _transacaoRepository;
+        #endregion
 
+        #region Construtor
         public TransacaoService(ITransacaoRepository transacaoRepository)
         {
             _transacaoRepository = transacaoRepository;
         }
+        #endregion
 
         public List<Transacao> ObterExtrato(int idConta, DateTime periodoInicial, DateTime periodoFinal)
         {

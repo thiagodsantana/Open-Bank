@@ -10,12 +10,16 @@ namespace OpenBank.Service.Services.Classes
 {
     public class ClienteService : IClienteService
     {
+        #region Interfaces
         private readonly IClienteRepository _clienteRepository;
+        #endregion
 
+        #region Construtor
         public ClienteService(IClienteRepository clienteRepository)
         {
             _clienteRepository = clienteRepository;
         }
+        #endregion
 
         public Cliente ObterPorCpf(string cpf)
         {
