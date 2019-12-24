@@ -35,7 +35,6 @@ namespace OpenBank.API
     {
         public Startup(IConfiguration configuration)
         {
-            
             Configuration = configuration;
         }
 
