@@ -7,7 +7,7 @@ namespace OpenBank.Service.Services.Interfaces
 {
     public interface IContaService
     {        
-        Conta ObterConta(string agencia, string numConta);
+        Conta ObterConta(int idUser, string agencia, string numConta);
         decimal ObterSaldo(string agencia, string NumConta);
         bool Depositar(int idConta, decimal valor);
         bool Sacar(int idConta, decimal valor);

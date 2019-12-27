@@ -1,4 +1,5 @@
-﻿using OpenBank.Domain.Enumerators;
+﻿using Microsoft.EntityFrameworkCore;
+using OpenBank.Domain.Enumerators;
 using OpenBank.Domain.Models;
 using OpenBank.Repository.Repositories.Interfaces;
 using OpenBank.Service.Services.Interfaces;
@@ -26,9 +27,15 @@ namespace OpenBank.Service.Services.Classes
         }
         #endregion
 
-        public Conta ObterConta(string agencia, string numConta)
+        public Conta ObterConta(int idUser, string agencia, string numConta)
         {
-            return _contaRepository.FindBy(p => p.Agencia.Equals(agencia) && p.NumConta.Equals(numConta)).FirstOrDefault();
+            var conta = _contaRepository.FindBy(p => p.Agencia.Equals(agencia) && p.NumConta.Equals(numConta)).Include(p => p.Cliente).FirstOrDefault();
+            if (conta == null)
+                throw new Exception("Conta não localizada!");
+
+            if (conta.ClienteId != idUser)
+                throw new Exception("Dados bancários inválidos!");
+            return conta;
         }
 
         public bool Depositar(int idConta, decimal valor)
@@ -65,11 +72,11 @@ namespace OpenBank.Service.Services.Classes
 
         public decimal ObterSaldo(string agencia, string numConta)
         {            
-            var conta = _contaRepository.FindBy(p => p.Agencia.Equals(agencia) && p.NumConta.Equals(numConta)).FirstOrDefault();
+            var conta = _contaRepository.FindBy(p => p.Agencia.Equals(agencia) && p.NumConta.Equals(numConta)).FirstOrDefault();            
             if (conta == null)
             {
                 throw new Exception("Conta não localizada!");
-            }
+            }                        
             return conta.Saldo;
         }
 

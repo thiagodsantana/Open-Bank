@@ -19,15 +19,19 @@ namespace OpenBank.API.Controllers
     [ApiController]
     public class TokenController : Controller
     {
+        #region Interfaces
         private readonly IConfiguration _configuration;
         private readonly IClienteService _clienteService;
+        #endregion
 
+        #region Construtor
         public TokenController(IConfiguration configuration, IClienteService clienteService)
         {
             _configuration = configuration;
             _clienteService = clienteService;
         }
-        
+        #endregion
+
         [Route("RequestToken")]
         [HttpPost]
         public IActionResult RequestToken([FromBody] LoginVM request)
